@@ -4,8 +4,8 @@ export const projects = [
     description:
       "Helps users rephrase, summarize, or expand text with a simple editor interface powered by free AI APIs.",
     tags: ["Next.js", "TypeScript", "Tailwind", "OpenAI API (free tier)"],
-    live: "https://ai-witing-assistant.vercel.app",
-    code: "#",
+    live: "https://writeai-azure.vercel.app/",
+    code: "https://github.com/Akeemkabiru/writeai",
     image: "/ai.jpg",
   },
   {
