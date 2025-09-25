@@ -3,16 +3,25 @@ export const projects = [
     title: "AI Writing Assistant",
     description:
       "Helps users rephrase, summarize, or expand text with a simple editor interface powered by free AI APIs.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "OpenAI API (free tier)"],
+    tags: ["Next.js", "TypeScript", "Tailwind", "Gemini API"],
     live: "https://writeai-azure.vercel.app/",
     code: "https://github.com/Akeemkabiru/writeai",
     image: "/ai.jpg",
   },
   {
+    title: "MemProt Explorer",
+    description:
+      "Web-based tool for interactive visualization of membrane protein structures, ligand-binding sites, and mutations, integrating PDB data with Mol*/NGL Viewer.",
+    tags: ["React", "TypeScript", "Tailwind", "Mol*", "NGL Viewer", "PDB"],
+    live: "https://memprot.vercel.app/",
+    code: "https://github.com/Akeemkabiru/memprot",
+    image: "/memprot.png",
+  },
+  {
     title: "Team Productivity Dashboard",
     description:
       "Tracks tasks, deadlines, and team activity in a single dashboard with charts, filters, and exportable reports.",
-    tags: ["React", "Next.js", "TypeScript", "Chart.js", "SQLite"],
+    tags: ["Next.js", "TypeScript", "Chart.js", "SQLite", "Express.js"],
     live: "#",
     code: "#",
     image: "/ai.jpg",
