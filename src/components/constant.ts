@@ -6,7 +6,7 @@ export const projects = [
     tags: ["Next.js", "TypeScript", "Tailwind", "Gemini API"],
     live: "https://writeai-azure.vercel.app/",
     code: "https://github.com/Akeemkabiru/writeai",
-    image: "/ai.jpg",
+    image: "/writeai.png",
   },
   {
     title: "MemProt Explorer",

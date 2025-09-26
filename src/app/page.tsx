@@ -109,7 +109,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <div className="relative flex flex-col h-full overflow-hidden rounded-lg bg-white shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-[1.02]">
+                <div className="relative flex flex-col h-full overflow-hidden rounded-lg bg-white border border-gray-00 shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-[1.02]">
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={project.image}
