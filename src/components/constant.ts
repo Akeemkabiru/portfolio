@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Business Landing Page",
     description:
-      "contemporary and highly professional business landing page, featuring a streamlined, fluid, and visually harmonious design and aesthetic",
+      "Highly professional business landing page, featuring a streamlined, fluid, and visually harmonious design and aesthetic",
     tags: ["Next.js", "TypeScript", "Tailwind", "Gemini API"],
     live: "https://www.regnumintercontinental.com/",
     image: "/regnum.png",
