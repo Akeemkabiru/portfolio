@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: "Business Landing Page",
+    description:
+      "contemporary and highly professional business landing page, featuring a streamlined, fluid, and visually harmonious design and aesthetic",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Gemini API"],
+    live: "https://www.regnumintercontinental.com/",
+    image: "/regnum.png",
+  },
+  {
     title: "AI Writing Assistant",
     description:
       "Helps users rephrase, summarize, or expand text with a simple editor interface powered by free AI APIs.",
