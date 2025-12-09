@@ -17,6 +17,15 @@ export const projects = [
     image: "/writeai.png",
   },
   {
+    title: "Consensus Core",
+    description:
+      "Upload multiple sequence alignment files (FASTA, CLUSTAL, PHYLIP, Stockholm) and extract consensus core regions, remove gaps, trim flanking regions, and download processed results.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Axios", "MSA Processing"],
+    live: "https://consensus-core.vercel.app/",
+    code: "https://github.com/Akeemkabiru/consensus-core",
+    image: "/consensus.png",
+  },
+  {
     title: "MemProt Explorer",
     description:
       "Web-based tool for interactive visualization of membrane protein structures, ligand-binding sites, and mutations, integrating PDB data with Mol*/NGL Viewer.",
