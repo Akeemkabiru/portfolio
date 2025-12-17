@@ -46,7 +46,7 @@ export default function Home() {
       >
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-6 text-slate-900"
+            className="text-3xl md:text-6xl font-bold mb-6 text-slate-900"
             variants={staggerItem}
           >
             Software Developer
