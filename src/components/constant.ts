@@ -77,7 +77,7 @@ export const experiences = [
   {
     role: "Frontend Engineer",
     company: "Haptle",
-    date: "Sep 2024 – Present",
+    date: "Sep 2024 – Dec 2025",
     location: "Nigeria",
     type: "Full-time",
     overview:
