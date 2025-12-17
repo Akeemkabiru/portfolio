@@ -34,24 +34,6 @@ export const projects = [
     code: "https://github.com/Akeemkabiru/memprot",
     image: "/memprot.png",
   },
-  {
-    title: "Team Productivity Dashboard",
-    description:
-      "Tracks tasks, deadlines, and team activity in a single dashboard with charts, filters, and exportable reports.",
-    tags: ["Next.js", "TypeScript", "Chart.js", "SQLite", "Express.js"],
-    live: "#",
-    code: "#",
-    image: "/ai.jpg",
-  },
-  {
-    title: "API Playground",
-    description:
-      "Lightweight tool to test REST and GraphQL endpoints with schema inspection and request history.",
-    tags: ["React", "TypeScript", "Tailwind", "GraphQL"],
-    live: "#",
-    code: "#",
-    image: "/ai.jpg",
-  },
 ];
 
 export const skills = {

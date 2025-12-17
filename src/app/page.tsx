@@ -49,15 +49,16 @@ export default function Home() {
             className="text-4xl md:text-6xl font-bold mb-6 text-slate-900"
             variants={staggerItem}
           >
-            Frontend Engineer
+            Software Developer
           </motion.h1>
 
           <motion.p
             className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed"
             variants={staggerItem}
           >
-            I design and deliver high-performance applications that transform
-            data into intuitive, reliable user experiences.
+            I design and deliver high-performance software solutions that
+            transform complex data and systems into intuitive, reliable user
+            experiences.
           </motion.p>
 
           <motion.div
@@ -70,7 +71,7 @@ export default function Home() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Explore Projects
+              Projects
             </motion.a>
 
             <motion.a
