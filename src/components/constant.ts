@@ -63,6 +63,7 @@ export const skills = {
     "Yup",
   ],
   "Backend & APIs": [
+    "Python",
     "Node.js",
     "Express.js",
     "REST APIs",

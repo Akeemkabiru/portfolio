@@ -229,19 +229,20 @@ export default function Home() {
               className="text-base text-justify space-y-4 hyphens-auto"
             >
               <p>
-                I&apos;m Kabiru Akeem, a Frontend Engineer who cares about
-                clarity, scalability, and long-term impact. I approach system
-                design with an eye for trade-offs, making informed decisions
-                that balance performance, usability, and maintainability. For
-                me, writing code is only part of the job, the bigger challenge
-                is designing systems that evolve gracefully and guiding teams
-                toward shared technical standards.
+                I&apos;m Kabiru Akeem, a software developer focused on designing
+                and delivering scalable systems with long-term impact. I
+                approach system design through deliberate trade-offs, balancing
+                performance, usability, and maintainability to build solutions
+                that stand the test of time.
               </p>
               <p>
-                I believe great engineering comes from collaboration as much as
-                technical skill. I work closely with product and backend teams
-                to ensure the frontend is not just functional but aligned with
-                the bigger picture.
+                Writing code is only one part of the role, the greater
+                responsibility is shaping systems that evolve gracefully,
+                establishing shared technical standards, and enabling teams to
+                move effectively. I believe strong engineering is rooted in
+                collaboration, and I work closely with product and backend teams
+                to ensure the frontend is a first-class citizen within a
+                cohesive, well-designed system.
               </p>
             </motion.div>
           </div>
