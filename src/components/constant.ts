@@ -4,7 +4,7 @@ export const projects = [
     description:
       "Highly professional business landing page, featuring a streamlined, fluid, and visually harmonious design and aesthetic",
     tags: ["Next.js", "TypeScript", "Tailwind", "Gemini API"],
-    live: "https://www.regnumintercontinental.com/",
+    live: "https://regnum-frontend.vercel.app/",
     image: "/regnum.png",
   },
   {
@@ -64,6 +64,8 @@ export const skills = {
   ],
   "Backend & APIs": [
     "Python",
+    "Rust",
+    "Golang",
     "Node.js",
     "Express.js",
     "REST APIs",

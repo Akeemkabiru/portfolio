@@ -46,19 +46,19 @@ export default function Home() {
       >
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-6 text-slate-900"
+            className="text-2xl md:text-6xl font-bold mb-6 text-slate-900"
             variants={staggerItem}
           >
-            Software Developer
+            Software Engineer
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed"
+            className="md:text-xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed"
             variants={staggerItem}
           >
-            I design and deliver high-performance software solutions that
-            transform complex data and systems into intuitive, reliable user
-            experiences.
+            I design and build high-performance software systems that turn
+            complex data and computation into reliable, production-ready
+            solutions.
           </motion.p>
 
           <motion.div
