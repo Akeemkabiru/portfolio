@@ -64,6 +64,8 @@ export const skills = {
   ],
   "Backend & APIs": [
     "Python",
+    "Rust",
+    "Golang",
     "Node.js",
     "Express.js",
     "REST APIs",
