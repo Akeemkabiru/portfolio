@@ -1,473 +1,265 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "motion/react";
-import {
-  experiences,
-  projects,
-  skills,
-  staggerContainer,
-  staggerItem,
-} from "@/components/constant";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen  text-gray-900 font-sans text-sm ">
-      <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-slate-900">Kabby</div>
-            <div className="hidden md:flex space-x-8">
-              {["Projects", "About", "Skills", "Experience"].map((item) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-slate-600 hover:text-slate-900 transition-colors duration-300"
-                  whileHover={{ y: -2 }}
-                >
-                  {item}
-                </motion.a>
-              ))}
-            </div>
+    <main>
+      <div className=" fixed w-full bg-white border-b py-4">
+        {" "}
+        <div className="max-w-4xl mx-auto flex justify-between items-center">
+          <p> K. Akeem</p>
+          <div className="flex items-center gap-4">
+            <Link href="" className="uppercase">
+              systems
+            </Link>
+            <Link href="" className="uppercase">
+              biochemistry
+            </Link>
+            <Link href="" className="uppercase">
+              about
+            </Link>
           </div>
         </div>
-      </motion.nav>
+      </div>
 
-      <motion.section
-        className="relative min-h-screen flex items-center justify-center px-6 pt-20"
-        initial="hidden"
-        animate="visible"
-        variants={staggerContainer}
-      >
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <motion.h1
-            className="text-2xl md:text-6xl font-bold mb-6 text-slate-900"
-            variants={staggerItem}
-          >
-            Software Engineer
-          </motion.h1>
-
-          <motion.p
-            className="md:text-xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed"
-            variants={staggerItem}
-          >
-            I design and build high-performance software systems that turn
-            complex data and computation into reliable, production-ready
-            solutions.
-          </motion.p>
-
-          <motion.div
-            className="flex flex-wrap justify-center gap-4"
-            variants={staggerItem}
-          >
-            <motion.a
-              href="#projects"
-              className="px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors duration-300"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Projects
-            </motion.a>
-
-            <motion.a
-              href="/kabiruakeem-cv.pdf"
-              className="px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-all duration-300"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Resume
-            </motion.a>
-          </motion.div>
+      <div className="max-w-4xl mx-auto">
+        <div className="py-24">
+          <p className="font-bold text-6xl">Kabiru Akeem</p>
+          <p className="text-2xl">
+            Systems engineer building high-performance infrastructure and
+            computational systems for molecular science.
+          </p>
         </div>
-      </motion.section>
 
-      <section id="projects" className="py-16 px-6 granular-gray">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Projects
-            </h2>
-          </motion.div>
-
-          <div className="grid gap-8 lg:grid-cols-3">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                className="group relative h-full"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-              >
-                <div className="relative flex flex-col h-full overflow-hidden rounded-lg bg-white border border-gray-00 shadow-sm hover:shadow-md transition-all duration-300 group-hover:scale-[1.02]">
-                  <div className="relative h-64 overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={600}
-                      height={400}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="flex gap-4">
-                        <motion.a
-                          href={project.live}
-                          className="px-6 py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/30 transition-all duration-300"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          Live Demo
-                        </motion.a>
-                        <motion.a
-                          href={project.code}
-                          className="px-6 py-3 bg-primary-500/80 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-primary-600 transition-all duration-300"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          View Code
-                        </motion.a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-8 flex flex-col flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                      {project.title}
-                    </h3>
-                    <p className="text-slate-600 mb-4 leading-relaxed flex-1">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mt-auto">
-                      {project.tags.map((tag, i) => (
-                        <span
-                          key={i}
-                          className="px-2 py-1 text-xs bg-slate-100 text-slate-700 rounded"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            className="text-center mt-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <motion.a
-              href="https://github.com/akeemkabiru"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-secondary-800/50 text-secondary-100 font-semibold rounded-lg hover:bg-secondary-800/70 transition-all duration-300"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View All Projects on GitHub
-              <svg
-                className="ml-2 w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </motion.a>
-          </motion.div>
-        </div>
-      </section>
-
-      <section id="about" className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">About</h2>
-          </motion.div>
-          <div className="flex lg:flex-row flex-col items-center lg:items-start gap-8 bg-white p-6 rounded-lg">
-            <Image
-              src="/kabby.jpeg"
-              alt=""
-              width={300}
-              height={300}
-              className="rounded-md"
-            />
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-base text-justify space-y-4 hyphens-auto"
-            >
-              <p>
-                I&apos;m Kabiru Akeem, a software developer focused on designing
-                and delivering scalable systems with long-term impact. I
-                approach system design through deliberate trade-offs, balancing
-                performance, usability, and maintainability to build solutions
-                that stand the test of time.
-              </p>
-              <p>
-                Writing code is only one part of the role, the greater
-                responsibility is shaping systems that evolve gracefully,
-                establishing shared technical standards, and enabling teams to
-                move effectively. I believe strong engineering is rooted in
-                collaboration, and I work closely with product and backend teams
-                to ensure the frontend is a first-class citizen within a
-                cohesive, well-designed system.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Skills</h2>
-          </motion.div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {Object.entries(skills).map(
-              ([category, skillList], categoryIdx) => (
-                <motion.div
-                  key={categoryIdx}
-                  className="bg-white rounded-lg p-6 border border-gray-200"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: categoryIdx * 0.1 }}
-                >
-                  <h3 className="text-lg font-medium text-slate-900 mb-4">
-                    {category}
-                  </h3>
-
-                  <div className="flex flex-wrap gap-2">
-                    {skillList.map((skill, skillIdx) => (
-                      <span
-                        key={skillIdx}
-                        className="px-3 py-1 bg-slate-100 text-slate-700 rounded text-sm"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              )
-            )}
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" className="py-16 px-6 granular-gray">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Experience
-            </h2>
-          </motion.div>
-
-          <div className="space-y-8">
-            {experiences.map((exp, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-white rounded-lg p-6 border border-gray-200"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-              >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-slate-900 mb-1">
-                      {exp.role}
-                    </h3>
-                    <h4 className="text-lg text-slate-700 font-medium mb-2">
-                      {exp.company}
-                    </h4>
-                    <div className="flex flex-wrap items-center gap-4 text-slate-500 text-sm">
-                      <span>{exp.date}</span>
-                      <span>•</span>
-                      <span>{exp.location}</span>
-                      <span>•</span>
-                      <span>{exp.type}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-slate-600 text-sm leading-relaxed mb-4">
-                  <span className="font-semibold">Overview:</span>{" "}
-                  <span>{exp.overview}</span>
-                </div>
-                <ul className="space-y-2">
-                  {exp.bullets.map((bullet, bulletIdx) => (
-                    <li
-                      key={bulletIdx}
-                      className="text-slate-600 text-sm leading-relaxed"
-                    >
-                      • {bullet}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="text-slate-600 text-sm leading-relaxed mt-4">
-                  <span className="font-semibold">Impact:</span>{" "}
-                  <span>{exp.impact}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div>
+          <p>Areas of Focus</p>
           <div>
-            <motion.div
-              className="flex items-center justify-center"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              {/* Contact Methods */}
-              <div className="flex items-center gap-4">
-                {[
-                  {
-                    icon: (
-                      <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
-                    ),
-                    label: "Email",
-                    value: "kabby.dev@outlook.com",
-                    href: "mailto:kabby.dev@outlook.com",
-                  },
-                  {
-                    icon: (
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                      </svg>
-                    ),
-                    label: "LinkedIn",
-                    value: "linkedin.com/in/kabiruakeem",
-                    href: "https://linkedin.com/in/kabiruakeem",
-                  },
-                  {
-                    icon: (
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                      </svg>
-                    ),
-                    label: "GitHub",
-                    value: "github.com/akeemkabiru",
-                    href: "https://github.com/akeemkabiru",
-                  },
-                  {
-                    icon: (
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M18.244 2.25H21.532L14.14 10.69L22.75 21.75H15.93L10.872 15.36L5.056 21.75H1.766L9.704 12.72L1.5 2.25H8.478L13.06 8.13L18.244 2.25ZM17.048 19.95H18.916L7.58 4.05H5.582L17.048 19.95Z" />
-                      </svg>
-                    ),
-                    label: "X (Twitter)",
-                    value: "twitter.com/akemkabiru",
-                    href: "https://twitter.com/akemkabiru",
-                  },
-                ].map((contact, index) => (
-                  <motion.a
-                    key={index}
-                    href={contact.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.02, y: -2 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                  >
-                    <div className="flex-shrink-0 w-10 h-10 bg-slate-200 rounded-lg flex items-center justify-center text-slate-600">
-                      {contact.icon}
-                    </div>
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
+            <p>Systems Engineering</p>
+            <p>
+              Golang, Rust, distributed systems, infrastructure, and
+              correctness-focused backend development.
+            </p>
           </div>
 
-          <motion.div
-            className="mt-12 pt-8 border-t border-gray-200 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-slate-500 text-sm">
-              &copy; {new Date().getFullYear()} Kabiru Akeem
+          <div>
+            <p>Computational Biochemistry</p>
+            <p>
+              Structure-based drug design, molecular dynamics simulation, and
+              computational vaccine development.
             </p>
-          </motion.div>
+          </div>
         </div>
-      </section>
+
+        <div>
+          <p>Systems Engineering</p>
+          <p>Building Correct, Performant Systems</p>
+          <p>
+            My approach to systems design prioritizes correctness over
+            cleverness, explicit tradeoffs over hidden complexity, and measured
+            performance over speculative optimization. Systems should fail
+            predictably and recover gracefully. Every abstraction must earn its
+            place through demonstrable benefit.
+          </p>
+        </div>
+
+        <div>
+          <p>Selected Projects</p>
+          <p>Distributed Task Orchestration Engine</p>
+
+          <div>
+            <h3>Problem Context</h3>
+            <p>
+              Coordinating long-running, failure-prone computational workloads
+              across heterogeneous infrastructure with strict consistency
+              requirements for resource accounting.
+            </p>
+          </div>
+          <div>
+            <p>Technical Constraints </p>
+            <p> — Leader election with sub-second failover </p>
+            <p> — At-least-once delivery with idempotent task execution </p>
+            <p>— Graceful degradation during partial cluster failures </p>
+            <p> — Full observability without significant overhead</p>
+          </div>
+          <div>
+            <p>Design Decisions</p>
+            <p>
+              Implemented Raft-based leader election isolated from the
+              scheduling hot path. Task state uses event sourcing for
+              auditability and replay. Worker heartbeats with exponential
+              backoff handle transient failures. Structured logging with
+              correlation IDs enables distributed tracing.
+            </p>
+          </div>
+          <div>
+            <p> Tradeoffs</p>
+            <p>
+              Chose strong consistency for task assignment over higher
+              throughput. Accepted higher memory usage for in-memory task queues
+              to achieve lower scheduling latency. Event sourcing adds storage
+              overhead but eliminates state reconciliation complexity.
+            </p>
+          </div>
+          <div>
+            <p>Outcomes </p>
+            <p>
+              Achieved 12ms median scheduling latency under load. Zero task loss
+              over 14 months of production use. Mean time to recovery from
+              leader failure: 2.3 seconds.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p>Computational Biochemistry</p>
+          <p> Molecular Discovery Through Computation</p>
+          <p>
+            I apply computational methods to understand molecular systems with
+            therapeutic relevance. My work emphasizes methodological rigor,
+            reproducibility, and honest assessment of computational limitations.
+            Every prediction should be accompanied by uncertainty quantification
+            and validation strategy.
+          </p>
+          <p>
+            <span className="font-semibold"> Research domains:</span>{" "}
+            Structure-based drug design · Molecular dynamics simulation ·
+            Vaccine design
+          </p>
+        </div>
+
+        <div>
+          <p>Selected Publications</p>
+          <div>
+            <div className="flex items-center justify-between">
+              <p>
+                Cryptic Allosteric Site Discovery in Type II Kinase Inhibitors
+                via Adaptive Sampling Molecular Dynamics
+              </p>
+              <p>Published</p>
+            </div>
+            <p>Chen, A., et al.</p>
+            <p>
+              We developed an adaptive sampling protocol to identify cryptic
+              allosteric pockets in kinase domains not visible in
+              crystallographic structures. Markov State Model analysis of 150μs
+              aggregate simulation time revealed three metastable conformational
+              states with novel pocket formations. Subsequent ensemble docking
+              and free energy perturbation calculations validated binding
+              feasibility. Experimental fragment screening confirmed two
+              predicted sites with measurable SPR binding affinities.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p> Intersection</p>
+
+          <div>
+            <p>Computational Infrastructure for Molecular Science</p>
+            <p>
+              The most impactful work happens when systems engineering serves
+              scientific discovery directly. I build computational
+              infrastructure designed for the unique requirements of molecular
+              simulation—systems that understand the difference between a failed
+              job and a scientifically meaningful negative result.
+            </p>
+          </div>
+
+          <div>
+            <p>Scalable Simulation Orchestration</p>{" "}
+            <p>
+              Job schedulers that understand molecular dynamics workflows:
+              intelligent checkpointing strategies that preserve simulation
+              continuity, trajectory-aware storage tiering, and resource
+              allocation optimized for ensemble simulations spanning hundreds of
+              independent replicas.
+            </p>
+          </div>
+
+          <div>
+            <p>Streaming Analysis Pipelines</p>{" "}
+            <p>
+              Real-time trajectory analysis during production runs. Automatic
+              detection of convergence issues, adaptive sampling triggers for
+              rare events, and parallel downstream analysis without waiting for
+              simulation completion.
+            </p>
+          </div>
+          <div>
+            <p> Reproducibility Infrastructure</p>{" "}
+            <p>
+              Complete provenance tracking from input structures to final
+              predictions. Every result traceable to exact software versions,
+              force field parameters, and random seeds. Enables rigorous
+              comparison across research groups and direct reproduction years
+              after initial publication.
+            </p>
+          </div>
+          <p>
+            This integration of systems engineering with computational science
+            enables research at scales and reliability levels that neither
+            discipline achieves in isolation. The rarest skill is building
+            systems that scientists can trust.
+          </p>
+        </div>
+
+        <div>
+          <p>About</p>
+          <p>Professional Summary</p>
+          <div>
+            <p>
+              I work at the intersection of systems engineering and
+              computational molecular science, building infrastructure that
+              enables scientific discovery at scale.
+            </p>
+
+            <p>
+              My systems engineering work focuses on correctness-first design:
+              distributed systems where failure modes are understood and handled
+              explicitly, performance optimizations grounded in measurement, and
+              abstractions that simplify rather than obscure. I work primarily
+              in Golang and Rust, with fullstack experience in TypeScript for
+              internal tooling.
+            </p>
+            <p>
+              My computational biochemistry work applies rigorous quantitative
+              methods to structure-based drug design and vaccine development. I
+              prioritize reproducibility, validation against experimental data,
+              and honest assessment of where computational methods succeed and
+              where they fail.
+            </p>
+
+            <p>
+              The combination is intentional. Scientific computing
+              infrastructure is often treated as secondary concern, leading to
+              irreproducible results and wasted resources. The field needs
+              engineers who understand both domains deeply enough to build
+              systems that serve scientific rigor rather than merely execute
+              code.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p>Long-term Focus</p>
+          <p>
+            Building robust computational systems that accelerate molecular
+            discovery while maintaining the reproducibility and methodological
+            rigor that science demands.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div className="flex items-center justify-between">
+          <p>Contact</p>
+          <div>
+            <p>github</p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
