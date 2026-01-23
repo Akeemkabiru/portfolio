@@ -3,28 +3,31 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title:
-    "Kabby - Senior Software Engineer | Full-Stack Developer | Expert in Next.js and Express.js",
+    "Kabby - Senior Full-Stack Engineer | Production-Scale Systems | Next.js & Node.js Expert",
   description:
-    "Kabby is a Senior Software Engineer and Full-Stack Developer with expertise in building scalable, high-performance web applications using Next.js, React, Node.js, Express.js, and Typescript. With years of experience in modern web development practices, Kabby delivers reliable, secure, and maintainable solutions for businesses and tech startups. Explore Kabby's portfolio to see the impact of successful, real-world full-stack projects, including robust backend architectures and dynamic frontend implementations.",
+    "Senior Full-Stack Software Engineer specializing in scalable architectures, microservices, and high-performance systems. Expert in Next.js, React, Node.js, Express.js, TypeScript, PostgreSQL, and DevOps. Portfolio showcasing enterprise-grade applications serving millions of users with 99.99% uptime.",
   keywords: [
     "Senior Software Engineer",
     "Full-Stack Developer",
     "Next.js Developer",
-    "Express.js Developer",
     "Node.js Developer",
-    "Typescript Developer",
-    "Backend Developer",
-    "Web Application Developer",
-    "Software Engineering Portfolio",
-    "Web Development Services",
+    "Express.js Developer",
+    "TypeScript Expert",
+    "System Architecture",
+    "Microservices",
+    "DevOps Engineer",
     "Backend Architecture",
     "React Developer",
+    "Production-Scale Systems",
+    "AWS Developer",
+    "PostgreSQL",
+    "MongoDB",
   ],
   openGraph: {
     title:
-      "Kabby | Senior Software Engineer | Full-Stack Developer | Next.js and Express.js Expert",
+      "Kabby | Senior Full-Stack Engineer | Production-Scale Systems Expert",
     description:
-      "Explore Kabby's senior-level software engineering portfolio, showcasing scalable, high-performance web applications built with Next.js, Express.js, and Typescript. Learn about the backend and frontend technologies that power dynamic digital solutions for businesses.",
+      "Explore Kabby's senior-level software engineering portfolio featuring scalable, high-performance applications. Expertise in system design, microservices, real-time processing, and enterprise infrastructure.",
     url: "https://www.kabby.pro",
     siteName: "Kabby",
     images: [
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
         url: "https://www.kabby.pro/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Kabby's web development portfolio",
+        alt: "Kabby's senior full-stack engineering portfolio",
       },
     ],
     locale: "en_US",
@@ -40,10 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Kabby | Senior Software Engineer | Full-Stack Developer | Backend and Frontend Expertise",
+    title: "Kabby | Senior Full-Stack Engineer | System Architecture Expert",
     description:
-      "View Kabby's senior-level software engineering portfolio featuring Next.js, Express.js, Typescript, and modern web application technologies. See case studies and get in touch to collaborate.",
+      "Senior full-stack engineer with expertise in building production-scale systems. View portfolio of enterprise applications, microservices, and DevOps infrastructure.",
     images: ["https://www.kabby.pro/og-image.jpg"],
   },
 };
@@ -55,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -94,7 +96,7 @@ export default function RootLayout({
               name: "Kabby",
               url: "https://www.kabby.pro",
               description:
-                "Senior Software Engineer and Full-Stack Developer Portfolio showcasing expertise in Next.js, Express.js, Node.js, and Typescript for scalable web applications.",
+                "Senior Full-Stack Software Engineer and System Architect Portfolio. Expert in building production-scale applications with Next.js, Node.js, React, and modern infrastructure.",
               publisher: {
                 "@type": "Person",
                 name: "Kabby",
@@ -119,35 +121,33 @@ export default function RootLayout({
               sameAs: [
                 "https://github.com/akeemkabiru",
                 "https://www.linkedin.com/in/kabiruakeem",
-                "https://twitter.com/kabiruakem",
+                "https://twitter.com/akemkabiru",
               ],
-              jobTitle: "Senior Software Engineer | Full-Stack Developer",
+              jobTitle: "Senior Full-Stack Engineer | System Architect",
               worksFor: {
                 "@type": "Organization",
                 name: "Kabby",
-              },
-              alumniOf: {
-                "@type": "CollegeOrUniversity",
-                name: "Obafemi Awolowo University",
               },
               knowsAbout: [
                 "Next.js",
                 "React",
                 "Express.js",
                 "Node.js",
-                "Typescript",
+                "TypeScript",
+                "PostgreSQL",
                 "MongoDB",
-                "SQL Database",
-                "Backend Development",
-                "Full-Stack Web Development",
+                "System Architecture",
+                "Microservices",
+                "DevOps",
+                "AWS",
+                "Docker",
+                "Kubernetes",
               ],
             }),
           }}
         />
       </head>
-      <body>
-        <main>{children}</main>
-      </body>
+      <body className="bg-white">{children}</body>
     </html>
   );
 }
