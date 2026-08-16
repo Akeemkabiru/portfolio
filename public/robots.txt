@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.kabby.pro
+Host: https://kabiruakeem.com
 
 # Sitemaps
-Sitemap: https://www.kabby.pro/sitemap.xml
+Sitemap: https://kabiruakeem.com/sitemap.xml

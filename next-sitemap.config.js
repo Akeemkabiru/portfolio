@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.kabby.pro",
+  siteUrl: "https://kabiruakeem.com",
   generateRobotsTxt: true,
   generateIndexSitemap: true,
   changefreq: "weekly",
