@@ -78,7 +78,7 @@ export function Navigation() {
                 </Dialog.Close>
               </div>
               <nav
-                className="mt-8 flex flex-1 flex-col gap-6"
+                className="mt-6 flex flex-1 flex-col gap-1"
                 aria-label="Mobile"
               >
                 {navLinks.map((link) => (
@@ -86,7 +86,7 @@ export function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="font-display text-3xl font-medium text-ink"
+                    className="border-b border-border py-4 font-display text-lg font-medium text-ink"
                   >
                     {link.label}
                   </Link>
