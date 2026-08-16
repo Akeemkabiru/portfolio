@@ -40,7 +40,7 @@ export default function Home() {
             <h1 className="mt-6 max-w-4xl text-balance font-display text-display-xl font-medium text-ink">
               {site.name}
             </h1>
-            <p className="mt-8 font-display text-display-md font-medium leading-[1.1] text-ink">
+            <p className="mt-8 font-display text-display-md font-medium leading-[1.2] text-ink">
               Software Engineering
               <br />
               <SerifAccent className="not-italic">
