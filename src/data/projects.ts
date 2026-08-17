@@ -22,13 +22,12 @@ export const projects: Project[] = [
     flagship: true,
     image: "/memprot.png",
     summary:
-      "A web application for interactive visualization of protein structures, ligand-binding sites, and mutations.",
-    problem:
-      "Studying a protein's structure, ligand-binding sites, or mutation impact typically means switching between disconnected desktop tools built for structural biologists, not the web.",
+      "Interactive visualization of protein structures, ligand-binding sites, and mutations.",
+    problem: "Structural biology tools are desktop-only, disconnected from the web.",
     approach:
-      "Built a browser-based viewer that retrieves structures directly from the RCSB PDB public API and renders them interactively, so structural analysis is one link away rather than a local install.",
+      "A browser-based viewer that pulls structures live from the RCSB PDB API — no install required.",
     architecture:
-      "Integrates the PDB public API for structure retrieval with Mol*/NGL Viewer for in-browser 3D rendering of protein structures, ligand-binding sites, and mutations.",
+      "PDB API for structure retrieval, Mol*/NGL Viewer for in-browser 3D rendering.",
     technologies: ["PDB API", "Mol* / NGL Viewer"],
     result: PLACEHOLDER,
     liveUrl: "https://memprot.vercel.app/",
@@ -38,45 +37,41 @@ export const projects: Project[] = [
     slug: "haptle-operations-dashboard",
     name: "Real-Time Operations Dashboard",
     summary:
-      "A real-time admin dashboard giving Haptle Technology's team live visibility into platform activity.",
+      "Live visibility into platform activity for Haptle Technology's operations team.",
     problem:
-      "Haptle's operations team needed live visibility into platform activity, vendor–user matching, and messaging — without manually refreshing or polling for updates.",
+      "Operations needed live visibility into activity and vendor matching — without manual polling.",
     approach:
-      "Built a real-time admin dashboard with a responsive, performant interface, backed by WebSocket-driven chat and activity updates, plus an AI-powered agent that recommends vendor matches from contextual data.",
+      "A real-time dashboard with WebSocket-driven updates and an AI agent for vendor matching.",
     architecture:
-      "Next.js frontend with Zustand for state management and Tailwind CSS for the interface; WebSocket connections stream chat and activity events; an AI recommendation agent matches vendors to users based on contextual data.",
+      "Next.js, Zustand, and Tailwind CSS on the frontend; WebSockets stream live events.",
     technologies: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS", "WebSockets"],
     result:
-      "Delivered as Haptle Technology's real-time admin dashboard, combining live operational visibility with AI-assisted vendor matching.",
+      "Haptle's real-time admin dashboard, combining live visibility with AI-assisted matching.",
   },
   {
     slug: "etherea-booking-platform",
     name: "Booking Platform — Full-Stack Case Study",
-    summary:
-      "REST APIs, real-time availability sync, and secured access for a booking platform, delivered as a contract engagement.",
+    summary: "Booking APIs with real-time availability sync, built as a contract engagement.",
     problem:
-      "Etherea needed booking, search, and cancellation workflows backed by APIs that stayed consistent under concurrent access, with availability reflected correctly across every connected client.",
+      "Booking, search, and cancellation needed to stay consistent under concurrent access.",
     approach:
-      "Built and integrated the REST APIs for booking, search, and cancellation, synchronized booking availability and UI state in real time via WebSockets, and secured the system end to end.",
+      "Built the REST APIs, synced availability in real time via WebSockets, and secured access end to end.",
     architecture:
-      "REST API layer over MongoDB with optimized queries; WebSocket layer for real-time state sync; JWT authentication with refresh-token workflows and role-based access control; rate limiting and input validation at the API boundary.",
+      "REST over MongoDB; WebSockets for state sync; JWT auth with refresh tokens and role-based access.",
     technologies: ["Node.js", "REST APIs", "MongoDB", "WebSockets", "JWT"],
-    result:
-      "A booking system with synchronized real-time availability across clients and access secured via JWT, refresh tokens, and role-based access control.",
+    result: "A booking system with real-time sync and secured, role-based API access.",
   },
   {
     slug: "monietab-fintech-platform",
     name: "Fintech Platform Frontend",
-    summary:
-      "A performance- and security-conscious fintech interface for saving and managing funds.",
-    problem:
-      "A fintech product needs interfaces that load fast, rank well, and handle wallet operations securely — with performance and security treated as first-class, not an afterthought.",
+    summary: "A performance- and security-focused frontend for a fintech platform.",
+    problem: "A fintech interface needs to load fast, rank well, and handle funds securely.",
     approach:
-      "Architected the platform on Next.js with server-side rendering for performance and SEO, split and lazy-loaded code to keep initial loads light, and integrated third-party wallet APIs behind secure, authenticated interfaces.",
+      "Built on Next.js with SSR, code-splitting, and secure wallet API integration.",
     architecture:
-      "Next.js with SSR and code splitting; modular, responsive UI components built with Tailwind CSS and Framer Motion; JWT/OAuth authentication; third-party wallet API integration for fund management.",
+      "Next.js with SSR and code splitting; Tailwind CSS and Framer Motion for UI; JWT/OAuth.",
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "JWT / OAuth"],
     result:
-      "A production fintech interface combining SSR performance, code-splitting, and secure wallet integration for saving and managing funds.",
+      "A production fintech frontend combining SSR performance with secure wallet integration.",
   },
 ];

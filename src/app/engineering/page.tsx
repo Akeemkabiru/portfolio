@@ -38,7 +38,7 @@ export default function EngineeringPage() {
       <PageHeader
         eyebrow="Engineering"
         title="I design, build, ship, and maintain software systems."
-        description="Full-stack engineering with a bias toward clear architecture and durable decisions — not just working demos."
+        description="Full-stack engineering with a bias toward clear architecture and durable decisions."
       />
 
       <Container className="pb-24">
@@ -48,12 +48,9 @@ export default function EngineeringPage() {
               How I approach engineering
             </h2>
             <p className="mt-4 text-base leading-relaxed text-muted">
-              Software engineer with strong DevOps expertise. I build
-              high-performance, scalable user interfaces and maintain the
-              deployment pipelines, cloud infrastructure, and CI/CD workflows
-              behind them — writing clean, maintainable code, optimizing for
-              performance, and collaborating cross-functionally to ship
-              production-ready software.
+              I build the interface and own the infrastructure it ships
+              through — deployment pipelines, cloud infrastructure, and CI/CD
+              are part of the job, not someone else&apos;s problem.
             </p>
           </div>
         </Reveal>
