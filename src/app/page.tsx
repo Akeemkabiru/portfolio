@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { SerifAccent } from "@/components/ui/SerifAccent";
+import { IntersectionGraphic } from "@/components/ui/IntersectionGraphic";
 import { site } from "@/data/site";
 import { shortTrajectory } from "@/data/research";
 import { projects } from "@/data/projects";
@@ -33,48 +34,54 @@ export default function Home() {
       {/* Hero */}
       <section className="pt-40 pb-20 md:pt-52 md:pb-28">
         <Container>
-          <Reveal>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
-              {site.positioning}
-            </p>
-            <h1 className="mt-6 max-w-4xl text-balance font-display text-display-xl font-medium text-ink">
-              {site.name}
-            </h1>
-            <p className="mt-8 font-display text-display-md font-medium leading-[1.2] text-ink">
-              Software Engineering
-              <br />
-              <SerifAccent className="not-italic">
-                for Computational Drug Discovery
-              </SerifAccent>
-            </p>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-              {site.tagline}
-            </p>
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+            <Reveal>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                {site.positioning}
+              </p>
+              <h1 className="mt-6 max-w-4xl text-balance font-display text-display-xl font-medium text-ink">
+                {site.name}
+              </h1>
+              <p className="mt-8 font-display text-display-md font-medium leading-[1.2] text-ink">
+                Software Engineering
+                <br />
+                <SerifAccent className="not-italic">
+                  for Computational Drug Discovery
+                </SerifAccent>
+              </p>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+                {site.tagline}
+              </p>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Button href="/engineering" variant="primary">
-                Engineering →
-              </Button>
-              <Button href="/research" variant="secondary">
-                Research →
-              </Button>
-            </div>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Button href="/engineering" variant="primary">
+                  Engineering →
+                </Button>
+                <Button href="/research" variant="secondary">
+                  Research →
+                </Button>
+              </div>
 
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
-              <Link
-                href="/publications"
-                className="text-sm text-muted underline decoration-border underline-offset-4 hover:text-ink hover:decoration-accent"
-              >
-                Publications
-              </Link>
-              <Link
-                href="/cv"
-                className="text-sm text-muted underline decoration-border underline-offset-4 hover:text-ink hover:decoration-accent"
-              >
-                CV
-              </Link>
-            </div>
-          </Reveal>
+              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                <Link
+                  href="/publications"
+                  className="text-sm text-muted underline decoration-border underline-offset-4 hover:text-ink hover:decoration-accent"
+                >
+                  Publications
+                </Link>
+                <Link
+                  href="/cv"
+                  className="text-sm text-muted underline decoration-border underline-offset-4 hover:text-ink hover:decoration-accent"
+                >
+                  CV
+                </Link>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1} className="hidden lg:block">
+              <IntersectionGraphic className="w-full" />
+            </Reveal>
+          </div>
         </Container>
       </section>
 
