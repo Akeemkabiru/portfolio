@@ -9,7 +9,9 @@ import { site } from "@/data/site";
 import { shortTrajectory } from "@/data/research";
 import { projects } from "@/data/projects";
 
-const proteinVisualizer = projects.find((p) => p.slug === "protein-visualizer")!;
+const proteinVisualizer = projects.find(
+  (p) => p.slug === "protein-visualizer",
+)!;
 
 const featuredAreas = [
   {
@@ -61,21 +63,6 @@ export default function Home() {
                   Research →
                 </Button>
               </div>
-
-              <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
-                <Link
-                  href="/publications"
-                  className="text-sm text-muted underline decoration-border underline-offset-4 hover:text-ink hover:decoration-accent"
-                >
-                  Publications
-                </Link>
-                <Link
-                  href="/cv"
-                  className="text-sm text-muted underline decoration-border underline-offset-4 hover:text-ink hover:decoration-accent"
-                >
-                  CV
-                </Link>
-              </div>
             </Reveal>
 
             <Reveal delay={0.1} className="hidden lg:block">
@@ -89,17 +76,25 @@ export default function Home() {
       <section className="border-y border-border bg-surface py-8">
         <Container>
           <Reveal>
-            <div className="flex flex-wrap items-center gap-x-2 gap-y-2 font-mono text-xs uppercase tracking-[0.1em] text-muted">
-              {shortTrajectory.map((step, index) => (
-                <span key={step} className="flex items-center gap-2">
-                  <span className={index === shortTrajectory.length - 1 ? "text-accent" : ""}>
-                    {step}
+            <div className="flex items-center justify-center">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-2 font-mono text-xs uppercase tracking-[0.1em] text-muted">
+                {shortTrajectory.map((step, index) => (
+                  <span key={step} className="flex items-center gap-2">
+                    <span
+                      className={
+                        index === shortTrajectory.length - 1
+                          ? "text-accent"
+                          : ""
+                      }
+                    >
+                      {step}
+                    </span>
+                    {index < shortTrajectory.length - 1 ? (
+                      <span className="text-faint">→</span>
+                    ) : null}
                   </span>
-                  {index < shortTrajectory.length - 1 ? (
-                    <span className="text-faint">→</span>
-                  ) : null}
-                </span>
-              ))}
+                ))}
+              </div>
             </div>
           </Reveal>
         </Container>
@@ -159,9 +154,9 @@ export default function Home() {
                     Scientific Software
                   </h3>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-                    Building software that makes biological and molecular
-                    data easier to explore and analyze — {proteinVisualizer.name}{" "}
-                    is the clearest example.
+                    Building software that makes biological and molecular data
+                    easier to explore and analyze. {proteinVisualizer.name} is
+                    the clearest example.
                   </p>
                   <span className="mt-4 text-sm font-medium text-ink underline decoration-border underline-offset-4 group-hover:decoration-accent">
                     Explore ↗

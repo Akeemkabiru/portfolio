@@ -28,22 +28,7 @@ export const experience: ExperienceEntry[] = [
       "Maintained deployment pipelines and cloud infrastructure as part of ongoing DevOps responsibilities.",
     ],
   },
-  {
-    id: "etherea",
-    category: "engineering",
-    role: "Fullstack Engineer",
-    org: "Etherea",
-    period: "July 2025–September 2025",
-    location: "Nigeria · Contract",
-    summary:
-      "A compact full-stack case study — booking system APIs, real-time sync, and application security.",
-    bullets: [
-      "Built and integrated REST APIs for booking, search, and cancellation workflows, and optimized MongoDB queries.",
-      "Implemented WebSocket-based real-time updates to keep booking availability and UI state synchronized across clients.",
-      "Implemented JWT authentication, refresh-token workflows, and role-based access control.",
-      "Applied rate limiting, input validation, and HTTPS/security best practices to protect application data.",
-    ],
-  },
+
   {
     id: "monietab",
     category: "engineering",

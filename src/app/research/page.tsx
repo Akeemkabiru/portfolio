@@ -17,7 +17,7 @@ const proteinVisualizer = projects.find((p) => p.slug === "protein-visualizer")!
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Computational approaches to understanding biology and designing better therapeutics — research interests, experience, and trajectory toward computational drug discovery.",
+    "Computational approaches to understanding biology and designing better therapeutics. Research interests, experience, and trajectory toward computational drug discovery.",
 };
 
 export default function ResearchPage() {
@@ -31,7 +31,7 @@ export default function ResearchPage() {
             <SerifAccent>designing better therapeutics</SerifAccent>.
           </>
         }
-        description="A scientific trajectory in progress — from biological sciences toward computational drug discovery."
+        description="A scientific trajectory in progress, from biological sciences toward computational drug discovery."
       />
 
       <Container className="pb-24">
@@ -129,7 +129,7 @@ export default function ResearchPage() {
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
               Software engineering gives me the ability to build computational
-              tools for scientific problems — starting with problems like
+              tools for scientific problems, starting with problems like
               these.
             </p>
           </Reveal>

@@ -10,6 +10,10 @@ export type Project = {
   githubUrl?: string;
   liveUrl?: string;
   image?: string;
+  // Optional gallery for the /engineering case study — add as many as you like
+  // and the project card automatically becomes an auto-advancing carousel.
+  // Falls back to `image` when omitted.
+  images?: string[];
   flagship?: boolean;
 };
 
@@ -23,7 +27,8 @@ export const projects: Project[] = [
     image: "/memprot.png",
     summary:
       "Interactive visualization of protein structures, ligand-binding sites, and mutations.",
-    problem: "Structural biology tools are desktop-only, disconnected from the web.",
+    problem:
+      "Structural biology tools are desktop-only, disconnected from the web.",
     approach:
       "A browser-based viewer that pulls structures live from the RCSB PDB API — no install required.",
     architecture:
@@ -36,6 +41,7 @@ export const projects: Project[] = [
   {
     slug: "haptle-operations-dashboard",
     name: "Real-Time Operations Dashboard",
+    image: "/memprot.png",
     summary:
       "Live visibility into platform activity for Haptle Technology's operations team.",
     problem:
@@ -44,14 +50,22 @@ export const projects: Project[] = [
       "A real-time dashboard with WebSocket-driven updates and an AI agent for vendor matching.",
     architecture:
       "Next.js, Zustand, and Tailwind CSS on the frontend; WebSockets stream live events.",
-    technologies: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS", "WebSockets"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Zustand",
+      "Tailwind CSS",
+      "WebSockets",
+    ],
     result:
       "Haptle's real-time admin dashboard, combining live visibility with AI-assisted matching.",
   },
   {
     slug: "etherea-booking-platform",
+    image: "/pikgo-dasboard.png",
     name: "Booking Platform — Full-Stack Case Study",
-    summary: "Booking APIs with real-time availability sync, built as a contract engagement.",
+    summary:
+      "Booking APIs with real-time availability sync, built as a contract engagement.",
     problem:
       "Booking, search, and cancellation needed to stay consistent under concurrent access.",
     approach:
@@ -59,13 +73,33 @@ export const projects: Project[] = [
     architecture:
       "REST over MongoDB; WebSockets for state sync; JWT auth with refresh tokens and role-based access.",
     technologies: ["Node.js", "REST APIs", "MongoDB", "WebSockets", "JWT"],
-    result: "A booking system with real-time sync and secured, role-based API access.",
+    result:
+      "A booking system with real-time sync and secured, role-based API access.",
   },
   {
     slug: "monietab-fintech-platform",
     name: "Fintech Platform Frontend",
-    summary: "A performance- and security-focused frontend for a fintech platform.",
-    problem: "A fintech interface needs to load fast, rank well, and handle funds securely.",
+    image: "/regnum.png",
+    summary:
+      "A performance- and security-focused frontend for a fintech platform.",
+    problem:
+      "A fintech interface needs to load fast, rank well, and handle funds securely.",
+    approach:
+      "Built on Next.js with SSR, code-splitting, and secure wallet API integration.",
+    architecture:
+      "Next.js with SSR and code splitting; Tailwind CSS and Framer Motion for UI; JWT/OAuth.",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "JWT / OAuth"],
+    result:
+      "A production fintech frontend combining SSR performance with secure wallet integration.",
+  },
+  {
+    slug: "monietab-fintech-platform",
+    name: "Fintech Platform Frontend",
+    image: "/facccion-one.png",
+    summary:
+      "A performance- and security-focused frontend for a fintech platform.",
+    problem:
+      "A fintech interface needs to load fast, rank well, and handle funds securely.",
     approach:
       "Built on Next.js with SSR, code-splitting, and secure wallet API integration.",
     architecture:

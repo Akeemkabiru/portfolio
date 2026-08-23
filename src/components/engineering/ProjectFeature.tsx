@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/data/projects";
 import { Reveal } from "@/components/ui/Reveal";
 import { Tag } from "@/components/ui/Tag";
+import { ProjectImageCarousel } from "@/components/engineering/ProjectImageCarousel";
 
 function Field({ label, value }: { label: string; value: string }) {
   return (
@@ -22,24 +22,24 @@ export function ProjectFeature({
   project: Project;
   index: number;
 }) {
+  const images = project.images?.length
+    ? project.images
+    : project.image
+      ? [project.image]
+      : [];
+
   return (
     <Reveal>
-      <article className="border-t border-border py-14 first:border-t-0 first:pt-0">
-        {project.image ? (
-          <div className="mb-10 overflow-hidden rounded-2xl border border-border">
-            <Image
-              src={project.image}
-              alt={`${project.name} screenshot`}
-              width={1600}
-              height={900}
-              className="h-auto w-full object-cover"
-            />
+      <article className="rounded-3xl border border-border bg-surface p-6 shadow-sm md:p-10">
+        {images.length > 0 ? (
+          <div className="mb-10 overflow-hidden rounded-xl border border-border">
+            <ProjectImageCarousel images={images} alt={`${project.name} screenshot`} />
           </div>
         ) : null}
         <div className="flex flex-col gap-10 md:flex-row md:gap-16">
           <div className="md:w-1/3">
             <div className="flex items-center gap-3">
-              <p className="font-mono text-xs text-faint">
+              <p className="flex h-6 w-6 items-center justify-center rounded-full border border-border font-mono text-xs text-faint">
                 {String(index + 1).padStart(2, "0")}
               </p>
               {project.flagship ? (

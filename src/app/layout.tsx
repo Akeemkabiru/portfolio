@@ -18,8 +18,8 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.positioning}`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} · ${site.positioning}`,
+    template: `%s · ${site.name}`,
   },
   description: site.description,
   keywords,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: `${site.name} — ${site.positioning}`,
+    title: `${site.name} · ${site.positioning}`,
     description: site.description,
     url: site.url,
     siteName: site.name,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.positioning}`,
+    title: `${site.name} · ${site.positioning}`,
     description: site.description,
   },
   alternates: {

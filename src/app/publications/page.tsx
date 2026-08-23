@@ -39,7 +39,7 @@ export default function PublicationsPage() {
         ) : (
           <div className="mt-8 border-t border-border pt-8">
             <p className="text-sm text-muted">
-              No completed publications yet — the following work is in
+              No completed publications yet. The following work is in
               preparation.
             </p>
             <div className="mt-6 space-y-6">

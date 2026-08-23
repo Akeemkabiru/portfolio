@@ -10,11 +10,13 @@ import { experience } from "@/data/experience";
 export const metadata: Metadata = {
   title: "Engineering",
   description:
-    "Software engineering profile — selected production work, architecture decisions, work history, and engineering skills.",
+    "Software engineering profile. Selected production work, architecture decisions, work history, and engineering skills.",
 };
 
 const engineeringProjects = projects.filter((p) => !p.flagship);
-const engineeringExperience = experience.filter((e) => e.category === "engineering");
+const engineeringExperience = experience.filter(
+  (e) => e.category === "engineering",
+);
 
 const skills: Record<string, string[]> = {
   Languages: ["TypeScript", "JavaScript", "Go"],
@@ -26,10 +28,21 @@ const skills: Record<string, string[]> = {
     "Responsive Web Design",
     "Frontend Performance Optimization",
   ],
-  "State & Data": ["Zustand", "Redux Toolkit", "TanStack React Query", "MongoDB"],
+  "State & Data": [
+    "Zustand",
+    "Redux Toolkit",
+    "TanStack React Query",
+    "MongoDB",
+  ],
   Backend: ["Node.js", "Express.js", "REST APIs"],
   "Real-Time Systems": ["WebSockets", "Event-driven workflows"],
-  "DevOps / Engineering": ["Git", "GitHub", "CI/CD", "Deployment", "Cloud infrastructure"],
+  "DevOps / Engineering": [
+    "Git",
+    "GitHub",
+    "CI/CD",
+    "Deployment",
+    "Cloud infrastructure",
+  ],
 };
 
 export default function EngineeringPage() {
@@ -37,24 +50,9 @@ export default function EngineeringPage() {
     <>
       <PageHeader
         eyebrow="Engineering"
-        title="I design, build, ship, and maintain software systems."
-        description="Full-stack engineering with a bias toward clear architecture and durable decisions."
+        title="The whole system is the job."
+        description="I move across the stack by necessity. REST APIs and data models on one end, interfaces on the other, WebSockets and deployment pipelines holding the two together. If a feature needs a schema change, an endpoint, a UI, and a deploy, that's one piece of work to me, not four handoffs."
       />
-
-      <Container className="pb-24">
-        <Reveal>
-          <div className="max-w-2xl border-t border-border pt-10">
-            <h2 className="font-display text-xl font-medium text-ink">
-              How I approach engineering
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted">
-              I build the interface and own the infrastructure it ships
-              through — deployment pipelines, cloud infrastructure, and CI/CD
-              are part of the job, not someone else&apos;s problem.
-            </p>
-          </div>
-        </Reveal>
-      </Container>
 
       <Container className="pb-24">
         <Reveal>
@@ -62,9 +60,13 @@ export default function EngineeringPage() {
             Selected work
           </p>
         </Reveal>
-        <div className="mt-8">
+        <div className="mt-8 space-y-10">
           {engineeringProjects.map((project, index) => (
-            <ProjectFeature key={project.slug} project={project} index={index} />
+            <ProjectFeature
+              key={project.slug}
+              project={project}
+              index={index}
+            />
           ))}
         </div>
       </Container>

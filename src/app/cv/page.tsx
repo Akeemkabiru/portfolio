@@ -16,7 +16,7 @@ export default function CvPage() {
       <PageHeader
         eyebrow="CV"
         title="The complete record."
-        description="This site curates the highlights — engineering, research, and everything between. The CV holds the full detail: every role, every research project, every credential."
+        description="This site curates the highlights: engineering, research, and everything between. The CV holds the full detail, every role, every research project, every credential."
       />
       <Container className="pb-32">
         <Reveal>
